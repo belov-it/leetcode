@@ -36,6 +36,17 @@ class Solution:
                 l += 1
                 continue
 
+    def moveZeroes3(self, a: list[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+
+        l = 0
+        for r in range(len(a)):
+            if (a[r]):
+                a[l], a[r] = a[r], a[l]
+                l += 1
+
 
 s = Solution()
-s.moveZeroesBest([1])
+s.moveZeroes3([1, 0, 1])
