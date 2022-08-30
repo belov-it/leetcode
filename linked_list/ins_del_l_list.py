@@ -21,12 +21,22 @@ def pr(ln):
         ln = ln.next
 
 
-l3 = ListNode(4)
+def del_el(head, value):
+    prev, cur = head, head
+    while (cur):
+        if (cur.val == value):
+            prev.next = cur.next
+            del(cur)
+            return
+        prev = cur
+        cur = cur.next
+
+
+l4 = ListNode(5, None)
+l3 = ListNode(4, l4)
 l2 = ListNode(2, l3)
 l1 = ListNode(1, l2)
-r = l1
-r = r.next
 
+del_el(l1, 1)
 
-s = Solution()
-pr(s.reverseList(l1))
+pr(l1)
