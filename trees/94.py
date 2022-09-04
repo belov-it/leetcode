@@ -31,3 +31,5 @@ root = TreeNode(1, l3, l1)
 
 s = Solution()
 print(s.inorderTraversal(root))
+
+
